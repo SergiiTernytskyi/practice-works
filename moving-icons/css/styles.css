@@ -1,0 +1,130 @@
+body {
+  padding: 30px 45px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 15px 15px;
+  min-width: 150px;
+  min-height: 50px;
+
+  font-size: 24px;
+  color: #fff;
+  background-color: teal;
+  border: 2px solid #000;
+  border-radius: 5px;
+
+  overflow: hidden;
+  transition: color 250ms ease-out, background-color 250ms ease-out;
+}
+
+.button::before {
+  content: "";
+
+  width: 25px;
+  height: 25px;
+  margin-right: 40px;
+
+  background-image: url(../images/automobile.svg);
+
+  transform: translateY(0);
+  transition: transform 250ms ease-out;
+}
+
+.button:hover,
+.button:focus {
+  color: #000;
+  background-color: bisque;
+}
+
+.button:hover::before,
+.button:focus::before {
+  transform: translateY(-50px);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  width: 25px;
+  height: 25px;
+  margin-right: 40px;
+
+  background-image: url(../images/city.svg);
+
+  transform: translateY(50px);
+  transition: transform 250ms ease-out;
+}
+
+.button:hover::after,
+.button:focus::after {
+  transform: translateY(-50%);
+}
+
+.button-two {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 15px 15px;
+  min-width: 150px;
+  min-height: 50px;
+
+  font-size: 24px;
+  color: #fff;
+  background-color: tomato;
+  border: 2px solid #000;
+  border-radius: 5px;
+
+  overflow: hidden;
+  transition: color 250ms ease-in, background-color 250ms ease-in;
+}
+
+.icon-one {
+  margin-right: 30px;
+  transform: translateY(0);
+  transition: transform 250ms ease-in;
+}
+
+.button-two:hover,
+.button-two:focus {
+  color: #000;
+  background-color: chocolate;
+}
+
+.button-two:hover .icon-one,
+.button-two:focus .icon-one {
+  transform: translateY(-50px);
+}
+
+.icon-two {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(50px);
+  transition: transform 250ms ease-in;
+}
+
+.button-two:hover .icon-two,
+.button-two:focus .icon-two {
+  transform: translateY(-50%);
+}
